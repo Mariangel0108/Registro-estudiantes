@@ -1,0 +1,46 @@
+<!-- Login -->
+<!-- Encabezado -->
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-md w-full max-w-sm">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-center text-gray-800">Welcome Back</h2>
+        <p class="mt-4 mb-5 text-gray-600 dark:text-neutral-400">Sign in to continue to TechNova.</p>
+      </div>
+<!-- Input 1 -->
+        <form (submit)="onlogin ()"[formGroup]="LoginForm">
+            <div class="mb-4">
+              <label for="Email" class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                <input
+                  type="Email"
+                  formControlName="Email"
+                  id="Email"
+                  name="Email"
+                  placeholder="ejemplo@correo.com"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  required>
+            </div>
+<!-- Input 2 -->
+            <div class="mb-6">
+                <label for="Password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+                <input
+                    type="Password"
+                    id="Password"
+                    formControlName="Password"
+                    name="Password"
+                    placeholder="********"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required>
+            </div>
+<!-- Boton de login -->
+            <button
+                type="submit"
+                class="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors">
+                Ingresar
+            </button>
+        </form>
+<!-- Input opcion -->
+        <div class="mt-6 text-center">
+            <a href="#" class="text-sm text-indigo-600 hover:underline">¿Olvidaste tu contraseña?</a>
+        </div>
+    </div>
+</div>
